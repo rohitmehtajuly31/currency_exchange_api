@@ -1,7 +1,11 @@
 const BASE_URL = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
 const dropdowns = document.querySelectorAll('.dropdown select');
+<<<<<<< HEAD
 const fromcurr=document.querySelector('.from select');
 const tocurr=document.querySelector('.to select');
+=======
+
+>>>>>>> 3606f8214e98c863d875d28523a1a9d3f1f22af9
 for (let select of dropdowns) {
     for (let currCode in countryList) {
         let newOption = document.createElement("option");
@@ -16,6 +20,7 @@ for (let select of dropdowns) {
         
         select.append(newOption);
     }
+<<<<<<< HEAD
     select.addEventListener("change",(evt)=>{
         updateflag(evt.target)
     })
@@ -24,6 +29,13 @@ for (let select of dropdowns) {
 
 
 
+=======
+
+    select.addEventListener("change",(evt)=>{
+        updateflag(evt.target)
+    })
+}
+>>>>>>> 3606f8214e98c863d875d28523a1a9d3f1f22af9
 const updateflag=((element)=>{
     let currcode=element.value;
     let countrycode=countryList[currcode];
@@ -31,6 +43,7 @@ const updateflag=((element)=>{
     let img = element.parentElement.querySelector('img');
     img.src=newsrc;
 })
+<<<<<<< HEAD
 
 const Currencyexchangerate=async()=>{
     let amt=document.querySelector('.amount imput')
@@ -56,3 +69,5 @@ const Currencyexchangerate=async()=>{
 window.addEventListener('load',()=>{
     Currencyexchangerate();
 })
+=======
+>>>>>>> 3606f8214e98c863d875d28523a1a9d3f1f22af9
